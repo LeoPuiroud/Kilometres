@@ -71,12 +71,13 @@ public class MainActivity extends AppCompatActivity {
             int mRealKmForToday = (int) realKmForToday;
             mTodaysGoal.setText(Integer.toString(mKmPredictionForToday));
             mTodayReal.setText(Integer.toString(mRealKmForToday));
+            mDiffKm.setText((Integer.parseInt(mTodaysGoal.getText().toString())-Integer.parseInt(mTodayReal.getText().toString()))+" Km");
             }
 
             mCarName.setText(carName);
             mCarMaxKm.setText((carMaxKm) + " Km");
             mCarKmLeft.setText((carMaxKm-carCurrentKm) + " Km");
-            mDiffKm.setText((Integer.parseInt(mTodaysGoal.getText().toString())-Integer.parseInt(mTodayReal.getText().toString()))+" Km");
+
        } catch (ParseException e) {
            e.printStackTrace();
        }
